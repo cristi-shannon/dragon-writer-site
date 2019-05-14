@@ -3,6 +3,10 @@ html, body {
     width: 100%;
 }
 
+p {
+    font-size: 1.5em;
+}
+
 .navbar {
     background-color: #0055A2;
     padding: 1% 0;
@@ -23,22 +27,17 @@ html, body {
 }
 
 
-
-.btn:hover {
-    color: #E8B139;
+#sign-up {
+    background-color: #D9D9BB;
+    padding-top: 150px;
 }
 
-
-#home {
-    background-color: #E8B139;
-    display: table;
-    height: 100%;
-    position: relative;
-    width: 100%;
-    background-size: cover;
+#avatar {
+    background-image: url(AvatarV2.png) repeat;
+    
 }
 
-#about {
+#downloads {
     background-color: #D9D9BB;
 }
 
@@ -46,25 +45,66 @@ html, body {
     background-color: #D9D9BB;
 }
 
-#bonus {
-    background-color: #D9D9BB;
 /*
-#B5B59C
-    #C9C9AD
-        #939597
+#legion {
+    background-color: #D9D9BB;
+    
+}
 */
-}
 
-.landing-text {
-    display: table-cell;
-    text-align: center;
+img {
     vertical-align: middle;
+    border-style: none;
 }
 
-.landing-text h1 {
-    font-size: 500%;
-    font-weight: 700;
+#apple {
+    max-width: 25%;
+    horiz 
 }
+
+#google {
+    max-width: 25%;
+}
+
+/*
+#download {
+    background-color: #C9C9AD;
+    max-width: 100%;
+}
+
+#screens {
+    height: 520px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+*/
+.col-md-6 {
+    max-width: 720px;
+    
+}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/*
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+*/
+
 
 .padding {
     padding: 80px 0;
@@ -74,48 +114,111 @@ html, body {
     width: 100%;
 }
 
-#fixed {
-    background-color: #E8B139;
-/*    background: url(main-2.png) no-repeat center center fixed;*/
-    display: table;
-    height: 60%;
-    width: 100%;
-    background-size: cover;
+
+/* Set a style for all buttons */
+button {
+  background-color: #0055A2;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
 }
 
-footer {
-    width: 100%;
-    background-color: #0055A2;
-    padding: 5% 5% 10% 5%;
-    color: #d5d5d5;
+button:hover {
+  opacity:1;
 }
 
-footer a {
-    color: #d5d5d5;
+/* Extra styles for the cancel button */
+.cancelbtn {
+  padding: 14px 20px;
+  background-color: #f44336;
 }
 
-footer a:hover {
-    color: #E8B139;
-    text-decoration: none;
+/* Float cancel and signup buttons and add an equal width */
+.cancelbtn, .signupbtn {
+  float: left;
+  width: 25%;
 }
 
-.fa {
-    padding: 15px;
-    font-size: 25px;
-    color: #d5d5d5;
+/* Add padding to container elements */
+.container {
+  padding: 16px;
 }
 
-.fa:hover {
-    color: #E8B139;
-    text-decoration: none;
+/* Clear floats */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
 }
 
-@media (max-width: 760px) {
-    .landing-text h1 {
-        font-size: 300%;
-    }
-    .fa {
-        font-size: 20px;
-        padding: 10px;
-    }
+/* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 150px) {
+  .cancelbtn, .signupbtn {
+     width: 100%;
+  }
+}
+
+/*the container must be positioned relative:*/
+.custom-select {
+  position: relative;
+  font-family: Arial;
+}
+
+.custom-select select {
+  display: none; /*hide original SELECT element:*/
+}
+
+.select-selected {
+  background-color: #0055A2;
+}
+
+/*style the arrow inside the select element:*/
+.select-selected:after {
+  position: absolute;
+  content: "";
+  top: 14px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: #fff transparent transparent transparent;
+}
+
+/*point the arrow upwards when the select box is open (active):*/
+.select-selected.select-arrow-active:after {
+  border-color: transparent transparent #fff transparent;
+  top: 7px;
+}
+
+/*style the items (options), including the selected item:*/
+.select-items div,.select-selected {
+  color: #ffffff;
+  padding: 8px 16px;
+  border: 1px solid transparent;
+  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+  cursor: pointer;
+  user-select: none;
+}
+
+/*style items (options):*/
+.select-items {
+  position: absolute;
+  background-color: #0055A2;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+
+/*hide the items when the select box is closed:*/
+.select-hide {
+  display: none;
+}
+
+.select-items div:hover, .same-as-selected {
+  background-color: rgba(0, 0, 0, 0.1);
 }
